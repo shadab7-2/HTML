@@ -1,0 +1,51 @@
+<!-- 🧩 Mini Coding Task (10 min)
+
+Create a semantic HTML layout for a news website homepage.
+Your structure must include:
+<header> with logo + nav
+<main> with:
+<section> for "Top Stories"
+<article> entry with title, description, and author
+<aside> for related articles
+<footer> with contact info
+Optional bonus: use <figure> + <figcaption> for news images. -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Semantic Tags</title>
+  </head>
+  <body>
+    <header>
+      <img src="logo.png" alt="Company logo" />
+      <nav>
+        <ul>
+          <li><a href="#home"></a> home</li>
+          <li><a href="#about"></a> about</li>
+          <li><a href="#products"></a> products</li>
+          <li><a href="#contact"></a> contact</li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <section>
+        <h2>Top Stories</h2>
+        <p>Latest breaking news updates.</p>
+      </section>
+
+      <article>
+        <h2>News Title Here</h2>
+        <p>Short description goes here.</p>
+        <p><strong>Author:</strong> John Doe</p>
+        <time datetime="2025-11-14">Nov 14, 2025</time>
+      </article>
+
+      <aside>
+        <h3>Related Articles</h3>
+        <p>Trending topics and more.</p>
+      </aside>
+    </main>
+    <footer> <p>&copy; 2025 News Website</p></footer>
+  </body>
+</html>

@@ -1,0 +1,97 @@
+<h1>What is Semantic HTML?</h1>
+<!-- Semantic HTML means using HTML tags that describe the meaning and purpose of the content instead of using generic <div> everywhere.
+    
+“I use semantic HTML to make pages more accessible, search-engine friendly, and maintainable. It improves both user experience and developer experience.”    
+    -->
+<h2>🧠 Important Semantic Tags (With Meaning</h2>
+<!-- 
+     | Tag                         | Meaning / Use                          |
+| --------------------------- | -------------------------------------- |
+| `<header>`                  | Top intro section / logo / nav         |
+| `<nav>`                     | Links or navigation menus              |
+| `<main>`                    | Unique main content of the page        |
+| `<section>`                 | Logical grouping of related content    |
+| `<article>`                 | Independent content (blog, card, post) |
+| `<aside>`                   | Sidebar / related info                 |
+| `<footer>`                  | Copyright, bottom navigation           |
+| `<figure>` / `<figcaption>` | Images with captions                   |
+| `<time>`                    | Date/time info                         |
+| `<address>`                 | Contact details                        |
+
+These tags communicate what the content is, not just how it looks.-->
+
+<h2>⭐ Why use Semantic HTML?</h2>
+<!-- 
+Makes your structure clear to browsers
+Improves SEO (search engines understand the content)
+Helps screen readers → better accessibility (A11Y)
+Improves team collaboration and maintainability
+Boosts React component structure (<Navbar>, <Footer>, etc.) -->
+
+<h1>💼 Real-World Usage (In Projects)</h1>
+<h2>1 React Components</h2>
+<!-- Semantic tags help break UI into meaningful components: -->
+function Layout() { return (
+<main>
+  <section>
+    <article>Post</article>
+  </section>
+</main>
+); }
+<!--  -->
+<h2>2. SEO</h2>
+<!-- 
+Search engines rely on structure to understand:--
+What your page is about
+What is the main content
+What to rank -->
+
+<h2>3. Accessibility</h2>
+<!-- 
+Screen readers navigate using landmarks:
+"Navigation region"
+"Main content"
+"Footer region"
+Semantic HTML = better accessibility automatically. -->
+
+<h2>4. Performance & Code Quality</h2>
+<!--
+Clean, semantic markup reduces:
+DOM nesting
+Extra <div> bombs
+CSS complexity -->
+
+<h1>❓ Interview Questions & Sample Answers</h1>
+<!-- 
+1️⃣ What is Semantic HTML?
+“Semantic HTML uses tags that describe the meaning of content — like <header>, <main>, <section>, <article> — instead of generic containers. It improves SEO, accessibility, and code readability.”
+
+2️⃣ Why is Semantic HTML important for SEO?
+“Search engines understand the structure better — they know where the main content is, what is a navigation, what is a blog article — which helps pages rank higher.”
+
+3️⃣ Difference between <section> and <article>?
+<section> = Groups related content
+
+<article> = Self-contained content that could stand alone (blog post, news card)
+
+4️⃣ How does Semantic HTML improve accessibility?
+“Screen readers use semantic tags as landmarks. For example, <nav> tells assistive tech that this is a navigation region.”
+
+5️⃣ How many <main> tags can a page have?
+Only one, because it represents the primary content of the page.
+
+6️⃣ When should you use <aside>?
+For content indirectly related to the main content (ads, related posts, sidebars).
+
+7️⃣ <div> vs Semantic Tags — when to use what?
+Use <div> only when no semantic meaning is needed.
+Use semantic tags when content has a purpose.
+
+8️⃣ What is a “div soup”?
+Overusing <div> everywhere with no structure — makes code unreadable and inaccessible.
+
+9️⃣ Is <header> only used once?
+No. You can have multiple headers, e.g., page header and section header.
+
+🔟 What is the purpose of <figure> and <figcaption>?
+To wrap media elements with a caption for proper semantics. -->
