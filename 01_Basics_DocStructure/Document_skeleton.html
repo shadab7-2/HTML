@@ -1,0 +1,83 @@
+<!-- “HTML stands for HyperText Markup Language, and it provides the structural skeleton of every web page.
+If you imagine a website as a house, HTML is the brick-and-wall structure, CSS is the paint and design, and JavaScript adds interactive features.”
+
+“HTML works using tags and elements that tell the browser what each part of the page represents — for example: headings, paragraphs, navigation, images, forms, and layout sections.” -->
+
+<!-- 1. Document skeleton (minimum valid HTML5): -->
+<!DOCTYPE html>
+<!-- tells browser this is HTML5. -->
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>My Page</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+  </head>
+  <body>
+    <h1>Hello world</h1>
+    <p>Welcome to Day 1.</p>
+  </body>
+</html>
+<!-- 
+ <!doctype html> → tells browser this is HTML5.
+ 
+ <html lang="en"> → language attribute used by screen readers & SEO.
+
+ <head> → metadata (title, charset, viewport, links to CSS, open graph tags).
+
+ <meta charset="utf-8"> → ensures consistent character encoding.
+
+ <meta name="viewport" ...> → essential for responsive layout on mobile. 
+ 
+ -->
+
+<h2>2. Basic structural tags </h2> 
+<!--
+  Headings: <h1> … <h6> — document hierarchy. Only one <h1> ideally.
+Paragraph: <p>
+Sectioning: <header>, <nav>, <main>, <section>, <article>, <aside>, <footer>
+Generic containers: <div> (block), <span> (inline)
+Comments: <!-- this is a comment 
+Self-closing elements (void): <img src="..." alt="">, <br>, <input>, <meta>, <link>
+  -->
+<h2>3 Attributes</h2>
+<!-- 
+Syntax: <tag attr="value">
+Important ones: id, class, src, href, alt, title, type, name, for, aria-*.
+Boolean attributes: <input disabled> (no ="true" needed).
+-->
+<h2>4 semantic vs representation</h2>
+<!-- 
+   Semantic tags (e.g., <nav>, <article>) describe meaning — better for accessibility & SEO.
+
+Use CSS for appearance, not extra tags like <font> or unnecessary <div>.
+-->
+
+<h2>5. Accessibility basics</h2>
+<!-- 
+ Always include alt on images.
+
+Use descriptive link text (avoid “click here”).
+
+Use proper heading order (h1 → h2 etc.).
+-->
+
+<h1>Real-World Usage — why this matters in projects </h1>
+<h2>Reat/SPA</h2>
+<!-- 
+    HTML provides the root (<div id="root">) and server-rendered HTML shell for hydration. Proper <meta> tags are required for good SEO and social sharing.
+-->
+<h2>SEO</h2>
+<!--
+    <title>, <meta name="description">, heading structure and semantic tags help search engines understand content.  
+-->
+<h2>Form and Backend</h2>
+<!-- 
+     Form structure (form, input, label) governs how data is collected and validated before hitting APIs.
+-->
+<h2>Accessibility: </h2>
+<!-- Screen readers rely on semantics (main, aria-*, alt) — required for inclusive products and many companies’ accessibility standards. -->
+
+<h2>Performance</h2>
+<!-- : Minimizing DOM depth, avoiding unnecessary elements, and placing critical resources in head/body correctly affects page performance. -->
+ <h2> Testing / QA</h2>
+ <!-- Clear semantic structure makes end-to-end tests and selectors more robust (use data-testid, id, not fragile CSS classes). -->

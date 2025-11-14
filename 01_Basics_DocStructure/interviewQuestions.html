@@ -1,0 +1,37 @@
+<!-- 
+  Interview Questions (practical + scenario-based) — with sample answers
+
+I’ll include concise sample answers you can memorize/expand in an interview.
+
+Q: What does <!doctype html> do and why is it important?
+A: It tells the browser to use standards mode (HTML5). Without it browsers may fall back to quirks mode and render inconsistently.
+
+Q: Explain the difference between <div> and <section>. When would you use each?
+A: <div> is a generic container with no semantic meaning. <section> indicates a thematic grouping of content (usually with a heading). Use <section> when the content forms a distinct part of the page with meaning.
+
+Q: Why is alt text important on <img>? Give an example of good alt.
+A: alt provides an accessible text alternative for screen readers and shows when the image fails to load. Good alt: alt="Profile photo of Shadab Ansari smiling". If decorative, alt="".
+
+Q: How do you make an HTML page mobile friendly?
+A: Add <meta name="viewport" content="width=device-width,initial-scale=1">, use responsive CSS (flexbox/grid, media queries), and ensure touch targets are large enough.
+
+Q: What’s the purpose of the <head> and what shouldn’t go there?
+A: <head> holds metadata, links to CSS/JS, and meta tags that affect the document. Visual content should not go there (no <h1>, images intended for the page). Scripts that need to block rendering or critical CSS may go there; deferred scripts should go before </body> or use defer.
+
+Q: How would you structure an accessible form?
+A: Use <label for="id"> or wrap input in <label>. Provide aria-describedby for extra instructions, use proper input types (email, tel) for native validation, and add required where necessary.
+
+Q: When should you use id vs class?
+A: id is unique per page and used for single elements, anchors, or tests. class is for applying styles/behavior to multiple elements. Prefer classes for styling.
+
+Q: What is semantic HTML and why does it matter for SEO and accessibility?
+A: Semantic HTML uses tags that describe content meaning (article, nav, header). Search engines and assistive tech use semantics to better index and present content, improving SEO and usability.
+
+Q: How do you include custom fonts and what should you be careful about?
+A: Use @font-face in CSS or link to Google Fonts. Be careful with font performance (use font-display, subset fonts, preload critical fonts) to avoid FOIT/FOUT.
+
+Q: Describe differences between <main>, <section>, and <article>.
+A: <main> is the primary content unique to the page. <section> is a thematic grouping; <article> is self-contained content (blog post, comment) that could be syndicated.
+
+
+-->

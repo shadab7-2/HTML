@@ -1,0 +1,65 @@
+<!-- 
+Task: Create a valid HTML5 page for a simple blog post. Requirements:
+
+Proper skeleton (doctype, html, head, meta charset, viewport, title).
+
+Use semantic tags: header with a site title, main with an article (title, author, date, paragraph), and footer with copyright.
+
+Include one image with meaningful alt.
+
+Add one internal link and one external link (with rel="noopener noreferrer" for external). 
+-->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width= device-width , initial-scale = 1" />
+    <meta
+      name="discription"
+      content="A short demo blog post about html basics,"
+    />
+    <title>My mini blog</title>
+  </head>
+  <body>
+    <header>
+      <h1>My mini blog</h1>
+      <nav>
+        <a href="#latest">Latest</a
+        ><a href="http://example.com" target="_blank" rel="noopener noreferrer"
+          >External</a
+        >
+      </nav>
+    </header>
+    <main>
+      <article>
+        <h2 id="latest">Understanding html structure</h2>
+        <p>
+          <strong>By:</strong>Sahdab Ansari -
+          <time datetime="2025-11-13">Nov 13 ,2025</time>
+        </p>
+        <img
+          src="html-basic.png"
+          alt="code editor showing html document sturcture "
+        />
+        <p>
+          HTML provides the sturctural foundation for web pages, semantic tag
+          improve accessibility...
+        </p>
+      </article>
+    </main>
+    <footer>
+      <p>&copy;2025 Shadab Ansari</p>
+    </footer>
+  </body>
+</html>
+
+<!-- 
+doctype tell the browser to use standard mode of html (html5)
+lang attributes is mondetory for html tag
+in head --there are 3 meta tag
+1 for cahrset
+2 for viewport
+3 for discription of website
+
+title tag is used for give the title of page
+-->
