@@ -1,0 +1,82 @@
+<h1>🧩 Mini Coding Task — apply it (10–20 minutes)</h1>
+
+<!-- Task A (Tables): Build an accessible HTML table for 5 students with columns: Name, Age, Email, Grade. Include:
+<caption> describing the table
+Proper <thead>, <tbody>
+First column header should use scope="row" for each row OR use <th scope="row"> for the name cells.
+
+Add a tfoot row with an average grade note (use colspan). -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Accessible Student Table</title>
+    <style>
+      table {
+        border: 1px solid gray;
+        border-collapse: collapse;
+      }
+      td, th {
+        border: 1px solid gray;
+        padding: 8px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Build an accessible HTML table for 5 students</h1>
+
+    <table>
+      <caption>Students — Batch A (2025)</caption>
+
+      <thead>
+        <tr>
+          <th scope="col">Name</th>
+          <th scope="col">Age</th>
+          <th scope="col">Email</th>
+          <th scope="col">Grade</th>
+        </tr>
+      </thead>
+
+      <tbody>
+        <tr>
+          <th scope="row">Shadab Ansari</th>
+          <td>25</td>
+          <td>sahdab@gmail.com</td>
+          <td>A</td>
+        </tr>
+        <tr>
+          <th scope="row">Aman Khan</th>
+          <td>22</td>
+          <td>aman@gmail.com</td>
+          <td>B</td>
+        </tr>
+        <tr>
+          <th scope="row">Riya Sharma</th>
+          <td>20</td>
+          <td>riya@gmail.com</td>
+          <td>A+</td>
+        </tr>
+        <tr>
+          <th scope="row">Imran Shaikh</th>
+          <td>23</td>
+          <td>imran@gmail.com</td>
+          <td>B+</td>
+        </tr>
+        <tr>
+          <th scope="row">Neha Patel</th>
+          <td>21</td>
+          <td>neha@gmail.com</td>
+          <td>A</td>
+        </tr>
+      </tbody>
+
+      <tfoot>
+        <tr>
+          <td colspan="4">Average grade calculated monthly</td>
+        </tr>
+      </tfoot>
+    </table>
+
+  </body>
+</html>

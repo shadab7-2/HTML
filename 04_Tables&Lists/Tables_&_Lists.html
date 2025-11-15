@@ -1,0 +1,102 @@
+<h1>Day 4 — HTML Tables & Lists</h1>
+<!-- List -->
+<h2>1 Unorder list-- for items where order doesn’t matter</h2>
+<ul>
+  <li>HTML</li>
+  <li>CSS</li>
+  <li>JavaScript</li>
+</ul>
+
+<h2>Ordered list (ol) — for ordered steps or priorities.</h2>
+<ol start="3" type="I">
+  <li>Prepare</li>
+  <li>Execute</li>
+</ol>
+<!-- Key points:
+
+Use CSS to style lists (e.g., list-style-type: none;) rather than changing semantics.
+
+Use lists for navigation, step-by-step instructions, feature lists, FAQs, etc. -->
+
+<h1>Tables</h1>
+<!-- Tables (<table>) present tabular/relational data (not for layout). -->
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Age</th>
+      <th>City</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Asha</td>
+      <td>24</td>
+      <td>Mumbai</td>
+    </tr>
+  </tbody>
+  <tfoot>
+    <tr>
+      <td colspan="3">Updated monthly</td>
+    </tr>
+  </tfoot>
+</table>
+<!-- Important elements:
+
+<table> — container
+
+<thead>, <tbody>, <tfoot> — group rows semantically
+
+<tr> — table row
+
+<th> — header cell (use scope="col" or scope="row" when helpful)
+
+<td> — data cell
+
+colspan / rowspan — merge cells
+
+Use captions and ARIA where needed: <caption> gives a title for the table.
+
+Key rule: Use tables only for tabular data (financial reports, CSV-like data, schedules). Avoid tables for layout. -->
+<h1>💼 Real-World Usage — where this matters</h1>
+<!-- Data display & dashboards: Tables show sortable, filterable data (users, orders, metrics). In React you often map arrays to <tr> rows.
+
+Accessibility: Screen readers use <th scope="col"> and <caption> to announce table context. Proper grouping (thead, tbody) improves navigation.
+
+Responsive patterns: On small screens, tables may need horizontal scrolling, stacking, or accessible alternatives (ARIA attributes, summaries).
+
+SEO & content: Lists are used for structured content (breadcrumbs, nav menus); search engines and rich results often expect lists for certain markup like FAQs.
+
+Testing & automation: Using <ul>/<li> and <table> makes selectors predictable for tests and scraping. -->
+
+<h1>❓ Interview Questions (with short sample answers)</h1>
+
+Q: When should you use a table versus a list or divs?
+A: Use a table for tabular/relational data (rows and columns with headers). Use lists or divs for navigation, items, or layout. Tables are not for page layout.
+
+Q: What’s the difference between <thead>, <tbody>, and <tfoot>?
+A: They group header rows, body rows, and footer rows respectively. They improve semantics, aid screen readers, and help browsers render large tables incrementally.
+
+Q: How do you make a table accessible?
+A: Add <caption> describing the table, use <th scope="col"> (or scope="row"), ensure logical reading order, and avoid complex merged cells without proper headers. Provide summaries for complex tables or use ARIA attributes.
+
+Q: What is colspan and rowspan? Give an example.
+A: colspan="2" makes a cell span two columns; rowspan spans rows. Example: a footer cell spanning all columns: <td colspan="4">Totals</td>.
+
+Q: How would you make a wide table mobile-friendly?
+A: Options: allow horizontal scrolling (overflow-x:auto on a wrapper), convert to stacked cards on small screens, or make columns collapsible. Ensure header association remains usable.
+
+Q: When is using <dl> preferred?
+A: For definitions, FAQs, metadata lists (term/description pairs). It’s semantically correct and better for screen readers.
+
+Q: How do you mark up navigation lists?
+A: Use <nav><ul><li><a href="...">Link</a></li></ul></nav> — gives semantic navigation landmarks for assistive tech.
+
+Q: What are common accessibility pitfalls with tables?
+A: Missing <th> headers, relying on visual styles to indicate headers, complex layouts without proper scope, and using tables for layout rather than data.
+
+Q: How to properly label table headers for screen readers?
+A: Use <th scope="col">Header</th> for column headers or headers + id attributes on complex tables. Also provide <caption> for context.
+
+Q: How do you style list bullets or numbering visually while keeping semantics?
+A: Use CSS (list-style-type, list-style-image, or ::marker) while maintaining the semantic <ul>/<ol> structure.    
