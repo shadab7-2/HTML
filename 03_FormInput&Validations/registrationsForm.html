@@ -1,0 +1,100 @@
+<!-- 🧩 Mini Coding Task (10 min)
+Create a registration form with the following fields:
+Full Name (required, min 3 chars)
+Email (required, type email)
+Password (required, minlength 6)
+Gender (radio)
+Country (select dropdown)
+Profile Photo (file input)
+Submit button -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Registration form</title>
+    <style>
+      input,
+      select {
+        margin-bottom: 10px;
+        width: 95%;
+        padding: 5px;
+      }
+      input[type="radio"] {
+        width: auto;
+        margin-right: 5px;
+        margin-left: 5px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1 style="text-align: center">Registration form</h1>
+    <form
+      action="/submit"
+      method="post"
+      enctype="multipart/form-data"
+      style="
+        margin-left: 50px;
+        border: 1px solid gray;
+        padding: 10px;
+        width: 400px;
+        border-radius: 10px;
+      "
+    >
+      <!-- Full Name (required, min 3 chars) -->
+      <label for="name">Full Name : </label><br />
+      <input
+        type="text"
+        id="name"
+        minlength="3"
+        name="fullName"
+        required
+      /><br />
+      <!-- Email (required, type email) -->
+      <label for="email">Email : </label><br />
+      <input type="email" id="email" name="email" required /><br />
+      <!-- Password (required, minlength 6)
+ -->
+      <label for="password">Password : </label><br />
+      <input
+        type="password"
+        id="password"
+        minlength="6"
+        name="password"
+        required
+      /><br />
+      <!-- Gender (radio) -->
+      <span>Choose your Gender : </span>
+      <input type="radio" name="gender" id="male" value="male" required />
+      <label for="male"> Male</label>
+      <input type="radio" name="gender" id="female" value="female" required />
+      <label for="female"> Female </label><br />
+      <hr />
+
+      <!-- Country (select dropdown)
+ -->
+      <span>Select your country : </span>
+      <select name="nationality" id="nationality" required>
+        <option value="" disabled selected>Select Country</option>
+        <option value="india">India</option>
+        <option value="luxembourg">Luxembourg</option>
+        <option value="uae">UAE</option>
+        <option value="germany">Germany</option>
+        <option value="new_zealand">New Zealand</option></select
+      ><br />
+      <!-- Profile Photo (file input) -->
+      <span>Upload Profile Photo : </span>
+      <input type="file" name="profile" id="Profile" accept="image/*" />
+
+      <!-- Submit button -->
+      <input
+        type="submit"
+        value="Register"
+        id="button"
+        name="button"
+        style="margin-top: 20px"
+      />
+    </form>
+  </body>
+</html>
