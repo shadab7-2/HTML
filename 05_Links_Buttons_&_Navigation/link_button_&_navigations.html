@@ -1,0 +1,129 @@
+<h1>Day 5 — Links, Buttons & Navigation</h1>
+
+<!--  -->
+<h1> 1. The <a> Tag (Anchor Tag)</h1>
+    <!-- Used to navigate to another page, section, or resource. -->
+     <a href="https://google.com">Visit Google</a>
+
+     <!-- Important attributes:
+
+href → target URL
+
+target="_blank" → open in new tab
+
+rel="noopener noreferrer" → security best practice when using target="_blank"`
+
+download → download file instead of opening
+
+mailto: / tel: → special protocols
+
+id → for internal page linking (anchors) 
+
+ex -->
+<a href="#contact">Go to Contact Section</a>
+
+<h1>2. The button Tag</h1>
+<!-- Used to perform actions, especially inside forms or JavaScript-driven UIs. -->
+ <button type="button">Click</button>     <!-- No form submission -->
+<button type="submit">Submit</button>    <!-- Form submit -->
+<button type="reset">Reset</button>      <!-- Resets form -->
+<!-- 🚀 Use <button> for actions. Use <a> for navigation. Never mix roles. -->
+     
+<h1>3. Navigation with <nav> </h1>
+<!-- <nav> defines a block of navigation links. -->
+<nav>
+  <ul>
+    <li><a href="/">Home</a></li>
+    <li><a href="/about">About</a></li>
+    <li><a href="/products">Products</a></li>
+    <li><a href="/contact">Contact</a></li>
+  </ul>
+</nav>
+<!-- Reasons to use <nav>:
+
+Screen readers identify it as a navigation region.
+
+Helps SEO understand your website structure.
+
+Helps layout and maintainability. -->
+<h1>💼 Real-World Usage</h1>
+<h2>In React:</h2>
+<!-- <Link> from React Router replaces <a> (client-side navigation).
+<button> triggers events: toggling modals, submitting forms, API calls. -->
+<h2>In Web Apps:</h2>
+<!-- Navbars use <nav> with <ul>/<li> + <a>.
+
+Social media icons use anchor tags.
+
+Buttons open modals, dropdowns, forms, or run JS functions. -->
+<h2>Accessibility</h2>
+<!-- Don’t use <a> without href.
+
+Don’t use <div> pretending to be buttons.
+
+Buttons should be reachable with keyboard and respond to Enter/Space. -->
+
+<h1>❓ Interview Questions (with Sample Answers)</h1>
+<!-- 
+1. What is the difference between <a> and <button>?
+
+Answer:
+<a> is for navigation (takes user to a URL).
+<button> is for actions (submit form, toggle UI).
+Using them correctly improves semantics, accessibility, and SEO.
+
+2. Should we use <a> for a JavaScript function like open modal?
+
+Answer:
+No. <a> implies navigation.
+Buttons should be used for actions.
+It helps screen readers understand the purpose.
+
+3. What does target="_blank" do and why use rel="noopener noreferrer"?
+
+Answer:
+Opens link in a new tab.
+noopener noreferrer prevents:
+
+reverse tabnabbing attacks
+
+access to window.opener (security risk)
+
+4. How do you create an internal page link?
+
+Answer:
+Give a section an ID → link to that ID.
+
+<a href="#services">Our Services</a>
+
+<section id="services">...</section>
+
+5. What is semantic navigation and why <nav>?
+
+Answer:
+<nav> identifies a navigation block.
+Helps:
+
+screen readers jump to navigation sections
+
+SEO understand site structure
+
+better organization of layout
+
+6. Can we put a <button> inside an <a> or vice versa?
+
+Answer:
+No. It creates nested interactive elements → accessibility issues.
+Instead, style one element to look like the other using CSS.
+
+7. Difference between type="button" and type="submit"?
+Answer:
+submit sends a form to server.
+button does nothing unless JS is attached.
+
+8. How do you make a link downloadable?
+<a href="file.pdf" download>Download PDF</a>
+
+9. Is it okay to use <div onclick="..."> instead of button?
+Answer:
+Bad practice. Divs are not keyboard accessible. Buttons are. -->
