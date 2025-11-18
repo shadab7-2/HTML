@@ -1,0 +1,153 @@
+<h1>Day 7 — Attributes & Global Attributes</h1>
+
+<h1>1. What Are HTML Attributes?</h1>
+<!-- Attributes provide additional information about an HTML element. -->
+ <img src="image.jpg" alt="A cat">
+<!-- Here:
+
+src and alt are attributes
+
+They modify the behavior of the <img> element -->
+<h1>2. Categories of Attributes</h1>
+<h2>Element-specific attributes
+</h2>
+<!-- → work only on specific tags
+(e.g., src for <img>, href for <a>) -->
+    <h2>Global attributes
+</h2>
+<!-- can be used on any HTML element
+(e.g., id, class, style, title, hidden, data-*) -->
+<h2>Boolean attributes
+</h2>
+<!-- present = true
+(e.g., disabled, checked, required) -->
+<h1>3. Global Attributes — The Most Important Part</h1>
+<h2>1. id</h2>
+<!-- Unique identifier (must not repeat). -->
+ <p id="intro">Hello</p>
+<!-- 
+ Used for:
+
+CSS targeting
+
+JS DOM selection
+
+internal navigation links -->
+<h2>2. class</h2>
+<!-- Reusable identifier. -->
+ <p class="info">Hello</p>
+<!-- Used widely with:
+
+CSS
+
+Tailwind
+
+Bootstrap
+
+JS selections -->
+<h2>3. style</h2>
+<!-- Inline styling (not recommended for large projects). -->
+ <p style="color:red;">Error</p>
+<h2>title</h2>
+<!-- Tooltip text — shows when mouse hovers. -->
+ <button title="Click to submit">Submit</button>
+
+ <h2>5. data-* (Custom Data Attributes)</h2>
+ <!-- Store custom data inside elements → very important for JavaScript. -->
+  <button data-product-id="24">Add to cart</button>
+<!-- In JS: element.dataset.productId -->
+
+ <h2>6. hidden</h2>
+ <!-- Hides the element without removing it from the DOM. -->
+  <p hidden>This is hidden</p>
+<h2>7. draggable</h2>
+<!-- Makes element draggable. -->
+ <img src="a.jpg" draggable="true">
+<h2>8. contenteditable</h2>
+<!-- Allows user to edit text directly. -->
+ <div contenteditable="true">Edit me</div>
+<!-- Used in:
+CMS
+Editors like Notion, Medium -->
+
+<h2>9. lang</h2>
+<!-- Used for screen readers. -->
+ <html lang="en">
+<h2>10. tabindex</h2>
+<!-- Defines keyboard navigation order. -->
+ <button tabindex="1">Login</button>
+
+
+ <h1>💼 Real-World Usage</h1>
+ <h2>In React:</h2>
+ <!-- class becomes className
+
+data-* used to pass custom info to event handlers
+
+Accessibility attributes (aria-*) widely used -->
+
+<h2>In Forms:</h2>
+<!-- required, disabled, readonly, placeholder -->
+
+<h2>UX:</h2>
+<!-- title shows hints
+contenteditable enables inline editing UI -->
+
+<h2>Accessibility:</h2>
+<!-- hidden + aria-hidden manage visibility
+tabindex controls focus
+role indicates semantic meaning -->
+
+<h1>❓ Interview Questions (with Sample Answers)</h1>
+<!-- 1. What are global attributes?
+
+Answer:
+Attributes that can be applied to any HTML element, such as id, class, style, title, hidden, and data-*.
+
+2. Difference between id and class?
+
+Answer:
+id → unique, used once.
+class → reusable, used multiple times.
+
+3. What is data-* used for?
+
+Answer:
+To store custom values directly in HTML, which can be accessed in JavaScript using element.dataset.
+
+4. What are Boolean attributes?
+
+Answer:
+Attributes that don’t require a value (presence = true), e.g., checked, disabled, required.
+
+5. What is the use of hidden?
+
+Answer:
+Hides the element but keeps it in the DOM (unlike removing it).
+
+6. How does tabindex work?
+
+Answer:
+It controls keyboard navigation order, which is key for accessibility.
+
+7. What is contenteditable used for?
+
+Answer:
+Makes elements editable → useful in rich text editors.
+
+8. Why should you avoid inline styles (style attribute)?
+
+Answer:
+Because they hurt maintainability, reuse, and separation of concerns.
+
+9. Explain attribute vs property?
+
+Answer:
+Attributes are the initial values in HTML.
+Properties are dynamic values in DOM at runtime.
+
+10. Explain aria-label vs title?
+
+Answer:
+aria-label → for screen readers.
+title → for mouse hover. -->
