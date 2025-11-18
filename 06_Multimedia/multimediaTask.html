@@ -1,0 +1,39 @@
+<!-- 🧩 Mini Coding Task — Your Turn
+Create a multimedia section containing:
+A <figure> with:
+an image
+a caption
+A video player:
+with controls,
+a poster image,
+at least one <source>
+An audio player:
+with controls
+fallback text -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Multimedia</title>
+</head>
+<body>
+    <h1>Create a multimedia section</h1>
+    <figure>
+        <img src="https://images.pexels.com/photos/2629372/pexels-photo-2629372.jpeg" alt="Beautiful bird" width="100">
+        <figcaption>
+          An image of a rare bird in India.
+        </figcaption>
+    </figure>
+
+    <video width="300" controls poster="https://images.pexels.com/photos/36762/scarlet-honeyeater-bird-red-feathers.jpg">
+        <source src="https://www.pexels.com/download/video/4793475/" type="video/mp4">
+        Your browser does not support this video.
+    </video>
+
+    <audio controls>
+        <source src="https://commondatastorage.googleapis.com/codeskulptor-assets/Epoq-Lepidoptera.ogg" type="audio/mp3">
+         Your browser does not support this video.
+    </audio>
+</body>
+</html>
