@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!--  -->
+    <meta />
+    <meta />
+    <meta />
+    <title>accessibility and aria role</title>
+  </head>
+
+  <body>
+    <h1 ar>Web Accessibility (A11y)</h1>
+    <!-- Web Accessibility (A11y) means making websites usable for everyone, including people with visual, hearing, motor, or cognitive disabilities. -->
+
+    <!-- Accessibility ensures:
+Screen readers can understand content
+Keyboard-only users can navigate
+Color-blind users can identify UI elements
+Forms are labeled correctly
+Interactive elements behave predictably -->
+
+    <!-- Why it matters:
+Required legally in many countries (WCAG standards)
+Improves SEO (Google uses accessibility signals)
+Improves overall UX and usability
+Shows mature frontend skills in interviews -->
+
+    <h1>📌 1. Core Accessibility Concepts</h1>
+    <h2>✔ Semantic HTML</h2>
+    <!-- Use proper HTML elements so assistive devices understand structure. -->
+    <pre>
+<header>header</header> <nav>nav</nav> <main>main</main> <footer>footer</footer> <button>button</button> <ul>ul</ul> <form>form</form>
+</pre>
+    <h2>✔ Keyboard Navigation</h2>
+    <!--Every interactive element should be usable with Tab, Enter, Space, Arrow keys.
+
+Elements like <button> are automatically keyboard-accessible.
+But <div onclick="..."> is not accessible.  -->
+
+    <h2>✔ Labels</h2>
+    <!-- Always label inputs, buttons, forms, and images. -->
+    <label for="email">Email:</label>
+    <input id="email" type="email" />
+
+    <h2>✔ Alt Text</h2>
+    <!-- Used by screen readers to describe images. -->
+    <img src="dog.jpg" alt="Golden retriever playing with a ball" />
+
+    <h2>✔ Focus Management</h2>
+    <!-- Use tabindex and browser focus styles. -->
+    <button autofocus>Start</button>
+
+    <!-- 📌 2. ARIA (Accessible Rich Internet Applications) -->
+    <h1>📌 2. ARIA (Accessible Rich Internet Applications)</h1>
+    <!-- ARIA adds extra meaning for screen readers, especially for custom UI components. -->
+    <h2 style="color: red">
+      ⚠ Only use ARIA when semantic HTML is not enough.
+    </h2>
+    <!-- Common ARIA Roles
+Role	Purpose
+role="button"	Makes a non-button element behave like a button
+role="navigation"	Marks navigation areas
+role="alert"	Announces urgent messages
+role="dialog"	For modals/popups
+role="progressbar"	For loaders -->
+
+    <div
+      autofocus=""
+      onclick="alert('hi')"
+      role="button"
+      aria-pressed="false"
+      tabindex="0"
+    >
+      Add to Cart
+    </div>
+
+    <!-- 💼 Real-World Usage for Developers -->
+    <h1>💼 Real-World Usage for Developers</h1>
+    <h2>✔ React Components</h2>
+    <!-- Accessible React button: -->
+    <button aria-label="Open sidebar">
+      X
+      <MenuIcon />
+    </button>
+    <h2>✔ Forms</h2>
+    <!-- Improves screen reader usage & validation. -->
+
+    <h2>✔ Navigation</h2>
+    <!-- Use <nav> instead of <div>Menu</div>. -->
+
+    <h2>✔ Modals</h2>
+    <!-- Need focus trap + role="dialog". -->
+
+    <h2>✔ E-commerce</h2>
+    <!-- aria-live for cart updates: -->
+    <div aria-live="polite">Item added to cart</div>
+  </body>
+</html>
+
+<!-- ❓ Top 10 Interview Questions + Sample Answers
+1️⃣ What is web accessibility?
+
+Sample Answer:
+"Web accessibility ensures that websites can be used by everyone, including people with disabilities. It involves using semantic HTML, proper labeling, keyboard navigation, ARIA roles, and following WCAG guidelines."
+
+2️⃣ What is ARIA, and when should you use it?
+
+Sample Answer:
+"ARIA stands for Accessible Rich Internet Applications. It adds meaning for assistive technologies. I only use ARIA when semantic HTML cannot express behavior — for example, custom dropdowns, modals, or toggle buttons."
+
+3️⃣ Difference between aria-label and aria-labelledby?
+
+Answer:
+
+aria-label → provides a string
+
+aria-labelledby → references another element for naming
+
+4️⃣ Why is semantic HTML important for accessibility?
+
+Because screen readers rely on meaningful HTML structure to announce headings, navigation, lists, forms, and buttons correctly.
+
+5️⃣ How do you make a custom <div> button accessible?
+<div role="button" tabindex="0" aria-pressed="true"></div>
+
+
+Plus keyboard events in JS.
+
+6️⃣ What is tabindex and when to use it?
+
+tabindex="0" → focusable in natural order
+
+tabindex="-1" → programmatically focusable (not in tab order)
+
+7️⃣ What is an accessible alternative for images?
+
+Using alt text that describes the meaning of the image.
+
+8️⃣ How to improve keyboard accessibility?
+
+Use:
+
+<button>
+
+<a href="">
+
+tabindex
+
+Focus styles
+
+Avoid click-only handlers
+
+9️⃣ What is aria-live used for?
+
+To announce dynamic content updates (ex: cart updates, notifications).
+
+🔟 What are WCAG guidelines?
+
+Web Content Accessibility Guidelines:
+Perceivable, Operable, Understandable, Robust (POUR). -->

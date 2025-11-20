@@ -1,0 +1,69 @@
+<!-- custom dropdown: -->
+<!-- Requirements:
+A button using semantic HTML
+aria-expanded + aria-controls
+Dropdown list using <ul>
+Keyboard accessible -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>custom dropdown</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body{
+            padding: 5px;
+        }
+        #menu{
+            border: 1px solid #ccc;
+            width: 120px;
+            padding: 8px 0px;
+            margin-top: 4px;
+        }
+
+        #menu li {
+            padding: 6px 12px;
+            cursor: pointer;
+        }
+
+        #menu li:hover, menu li:focus{
+            background: #f0f0f0;
+            outline: none;
+        }
+    </style>
+  </head>
+  <body>
+    <!-- Accessible dropdown button -->
+    <button id="dropdownButton" aria-expanded="false" aria-controls="menu">Option</button>
+
+    <ul id="menu" role="menu" hidden>
+      <li role="menuitem">Profile</li>
+      <li role="menuitem">Setting</li>
+      <li role="menuitem">Logout</li>
+    </ul>
+
+    <script>
+        const btn = document.getElementById("dropdownButton");
+        const menu = document.getElementById("menu");
+
+        btn.addEventListener("click", ()=>{
+            const expanded = btn.getAttribute("aria-expanded") === "true";
+            btn.setAttribute("aria-expanded", !expanded);
+            menu.hidden = expanded;
+
+        })
+
+        btn.addEventListener("keydown", (e)=>{
+            if(e.key === "Enter" || e.key === " "){
+                e.preventDefault();
+                btn.click();
+            }
+        })
+    </script>
+  </body>
+</html>
